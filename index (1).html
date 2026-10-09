@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeJob AI - Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at 20% 10%, #3a2100, #080808 45%), #080808;
+            color: white;
+            min-height: 100vh;
+        }
+        nav {
+            min-height: 75px; padding: 15px 7%; display: flex; align-items: center;
+            justify-content: space-between; gap: 16px; flex-wrap: wrap;
+            background: rgba(0,0,0,.92); border-bottom: 1px solid #f59e0b;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { color: #f59e0b; font-size: 25px; font-weight: bold; text-shadow: 0 0 15px #f59e0b; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; transition: .3s; }
+        nav a:hover { color: #f59e0b; text-shadow: 0 0 10px #f59e0b; }
+        .hero {
+            min-height: 82vh; display: flex; justify-content: center; align-items: center;
+            text-align: center; padding: 50px 20px;
+        }
+        .hero-content { max-width: 900px; animation: fadeUp 1s ease; }
+        .badge {
+            display: inline-block; padding: 8px 18px; border: 1px solid #f59e0b;
+            border-radius: 30px; color: #f59e0b; margin-bottom: 20px; animation: pulse 2s infinite;
+        }
+        h1 { font-size: clamp(36px, 6vw, 70px); color: #f59e0b; text-shadow: 0 0 10px #f59e0b, 0 0 30px #f59e0b; animation: glow 2s infinite alternate; }
+        h2 { margin: 15px 0; font-size: clamp(22px, 3vw, 28px); }
+        .hero p { color: #aaa; font-size: 18px; line-height: 1.8; max-width: 750px; margin: auto; }
+        .btn {
+            display: inline-block; margin-top: 30px; padding: 15px 35px; background: #f59e0b;
+            color: #000; text-decoration: none; font-weight: bold; border-radius: 10px; transition: .3s;
+        }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 0 20px #f59e0b, 0 0 40px rgba(245,158,11,.4); }
+        .features {
+            width: 90%; max-width: 1100px; margin: 0 auto 80px;
+            display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+        }
+        .feature {
+            padding: 30px; background: rgba(18,18,18,.9); border: 1px solid #3d2a0b;
+            border-radius: 18px; text-align: center; transition: .4s; animation: fadeUp 1.2s ease;
+        }
+        .feature:hover { transform: translateY(-10px); border-color: #f59e0b; box-shadow: 0 0 25px rgba(245,158,11,.2); }
+        .icon { font-size: 45px; margin-bottom: 15px; }
+        .feature h3 { color: #f59e0b; margin-bottom: 12px; }
+        .feature p { color: #aaa; line-height: 1.6; }
+        footer { text-align: center; padding: 24px 12px; color: #888; border-top: 1px solid #292016; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes glow { from { text-shadow: 0 0 8px #f59e0b; } to { text-shadow: 0 0 20px #f59e0b, 0 0 40px #f59e0b; } }
+        @keyframes pulse { 50% { box-shadow: 0 0 20px rgba(245,158,11,.5); } }
+        @media (max-width: 750px) {
+            nav { justify-content: center; }
+            .logo { width: 100%; text-align: center; }
+            nav a { margin: 0 7px; font-size: 14px; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">FakeJob AI</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/detect">Detect</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">🛡️ Smart Job Safety System</div>
+        <h1>FakeJob AI</h1>
+        <h2>Detect Suspicious Job Offers</h2>
+        <p>
+            Analyze job descriptions, identify suspicious patterns,
+            calculate risk scores and understand why a job may be unsafe
+            before sharing your personal information.
+        </p>
+        <a href="/detect" class="btn">🔍 Check a Job</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <div class="icon">🤖</div>
+        <h3>AI Explanation</h3>
+        <p>Understand why a job is suspicious with detailed reasons.</p>
+    </div>
+    <div class="feature">
+        <div class="icon">📊</div>
+        <h3>Risk Score</h3>
+        <p>Get a visual risk percentage and Low, Medium or High risk level.</p>
+    </div>
+    <div class="feature">
+        <div class="icon">🚨</div>
+        <h3>Scam Detection</h3>
+        <p>Detect registration fees, urgent hiring, no interview and suspicious payment requests.</p>
+    </div>
+</section>
+
+<footer>FakeJob AI · Check carefully before trusting a job offer.</footer>
+</body>
+</html>
